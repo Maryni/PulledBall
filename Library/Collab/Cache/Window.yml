@@ -14,64 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
     m_Keys:
-    - Assets/Materials.meta
-    - Assets/Materials/Enemy.mat
-    - Assets/Materials/Enemy.mat.meta
-    - Assets/Materials/Player.mat
-    - Assets/Materials/Player.mat.meta
-    - Assets/Materials/Portal.mat
-    - Assets/Materials/Portal.mat.meta
-    - Assets/Materials/Terrain.mat
-    - Assets/Materials/Terrain.mat.meta
-    - Assets/Materials/Walls.mat
-    - Assets/Materials/Walls.mat.meta
-    - Assets/Materials/Way.mat
-    - Assets/Materials/Way.mat.meta
-    - Assets/Phys Material.meta
-    - Assets/Phys Material/Enemy.physicMaterial
-    - Assets/Phys Material/Enemy.physicMaterial.meta
-    - Assets/Phys Material/Player.physicMaterial
-    - Assets/Phys Material/Player.physicMaterial.meta
-    - Assets/Phys Material/Wall.physicMaterial
-    - Assets/Phys Material/Wall.physicMaterial.meta
-    - Assets/Prefabs.meta
-    - Assets/Prefabs/Capsule.prefab
-    - Assets/Prefabs/Capsule.prefab.meta
     - Assets/Prefabs/GameManager.prefab
-    - Assets/Prefabs/GameManager.prefab.meta
     - Assets/Prefabs/Player.prefab
-    - Assets/Prefabs/Player.prefab.meta
     - Assets/Scenes/Game.unity
-    - Assets/Scenes/Game.unity.meta
-    - Assets/Scenes/SampleScene.meta
-    - Assets/Scenes/SampleScene.unity
-    - Assets/Scenes/SampleScene/NavMesh.asset
-    - Assets/Scenes/SampleScene/NavMesh.asset.meta
-    - Assets/Scenes/SampleSceneSettings.lighting
-    - Assets/Scenes/SampleSceneSettings.lighting.meta
-    - Assets/Scenes/Start.unity
-    - Assets/Scenes/Start.unity.meta
-    - Assets/Scripts.meta
-    - Assets/Scripts/Game.meta
-    - Assets/Scripts/Game/ActionsReactions.cs
-    - Assets/Scripts/Game/ActionsReactions.cs.meta
     - Assets/Scripts/Game/ClickingAction.cs
-    - Assets/Scripts/Game/ClickingAction.cs.meta
-    - Assets/Scripts/Game/MoveToPortal.cs
-    - Assets/Scripts/Game/MoveToPortal.cs.meta
-    - Assets/Scripts/Game/ObjectManager.cs
-    - Assets/Scripts/Game/ObjectManager.cs.meta
-    - Assets/Scripts/UI.meta
-    - Assets/Scripts/UI/LevelComplete.cs
-    - Assets/Scripts/UI/LevelComplete.cs.meta
-    - Assets/Scripts/UI/LevelManager.cs
-    - Assets/Scripts/UI/LevelManager.cs.meta
-    - ProjectSettings/EditorBuildSettings.asset
-    - ProjectSettings/ProjectSettings.asset
-    - ProjectSettings/TagManager.asset
-    - ProjectSettings/UnityConnectSettings.asset
     - 
-    m_Values: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    m_Values: 0101010101
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

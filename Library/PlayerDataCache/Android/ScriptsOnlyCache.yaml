@@ -494,7 +494,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 7d0a4092e628daf974e996779eac3182
+      Hash: e79051fbaf58f7a18b83f20c8004345d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ClickingAction
@@ -616,4 +616,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Start.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Unity/PulledBall/PulledBall/Build/v1_mod3.apk
+  playerPath: C:/Unity/PulledBall/PulledBall/Build/v1_mod4.apk

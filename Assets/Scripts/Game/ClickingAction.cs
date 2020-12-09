@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ClickingAction : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class ClickingAction : MonoBehaviour
     [SerializeField] private float timer=1f;
     [SerializeField] private ObjectManager objectManager;
     [SerializeField] private ActionsReactions actionsReactions;
+    [SerializeField] private Text text;
     private void FixedUpdate()
     {
         TakePosition();
@@ -21,7 +23,9 @@ public class ClickingAction : MonoBehaviour
         {
             print("pressed LMB");
             if (timer <= 3.5f) timer += 0.01f;
-                else CheckTimer();
+            
+            CheckTimer(true); //just transform a point at localScale =1f;
+            text.text = timer.ToString();
 
             var ray = camera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit = new RaycastHit();
@@ -34,10 +38,11 @@ public class ClickingAction : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
+            print("timer = " + timer);
             ActionsFromTimer();
             Distance();
-            CheckTimer();
-            print("unpressed LMB, timer =" + timer);
+            CheckTimer(false);
+            print("unpressed LMB, late timer =" + timer);
         }
     }
     private void Distance()
@@ -45,20 +50,26 @@ public class ClickingAction : MonoBehaviour
         Vector3 playerPos;
         playerPos = objectManager.GameObjectPlayer().transform.position;
         var distance = (point.position - playerPos).normalized;
-        rigidbody.AddForce(distance * 150f, ForceMode.Impulse);
+        rigidbody.AddForce(distance * 200f, ForceMode.Impulse);
 
         Debug.DrawRay(objectManager.GameObjectPlayer().transform.position, distance*35f);
         
     }
-    private void CheckTimer()
+    private void CheckTimer(bool reset)
     {
-        if(timer>3.5f)
+        if(!reset)
         {
             timer = 1f;
-            point.localScale = new Vector3(1f,1f,1f);
-            objectManager.GameObjectPlayer().transform.localScale= new Vector3(6f, 2f, 6f);
-            objectManager.ChangeTransformPrefabParent(timer,true);
+            //point.localScale = new Vector3(1f,1f,1f);
+            //objectManager.GameObjectPlayer().transform.localScale= new Vector3(6f, 2f, 6f);
+
+            //actionsReactions.ResetSizeColider();
+        }
+        if(reset)
+        {
+            point.localScale = new Vector3(1f, 1f, 1f);
             actionsReactions.ResetSizeColider();
+            objectManager.ChangeTransformPrefabParent(timer, true);
         }
     }
     private void ActionsFromTimer()
@@ -67,5 +78,6 @@ public class ClickingAction : MonoBehaviour
         objectManager.ChangeTransformPlayer(timer);
         objectManager.ChangeTransformPrefabParent(timer,false);
         actionsReactions.ChangeSizeColider(timer);
+        print("actions complete at timer ="+timer);
     }
 }

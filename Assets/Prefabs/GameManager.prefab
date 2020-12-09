@@ -72,6 +72,7 @@ MonoBehaviour:
   timer: 1
   objectManager: {fileID: 5467922538662703679}
   actionsReactions: {fileID: 0}
+  text: {fileID: 0}
 --- !u!114 &2065569021
 MonoBehaviour:
   m_ObjectHideFlags: 0
